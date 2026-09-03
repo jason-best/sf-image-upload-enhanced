@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app/main/default",
+      "default": true
+    }
+  ],
+  "name": "image-upload-enhanced",
+  "namespace": "three_levers",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "65.0"
+}

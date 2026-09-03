@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Image Upload Enhanced</masterLabel>
+    <description>Enhanced image upload with resize, compression, and preview. Outputs base64 for Flow or Apex to persist.</description>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="displayLabel" default="Image Upload" label="Display Label" type="String" role="inputOnly" required="true" />
+            <property name="targetWidth" label="Target Width" type="Integer" role="inputOnly" required="true" />
+            <property name="targetHeight" label="Target Height" type="Integer" role="inputOnly" required="true" />
+            <property name="previewWidth" label="Preview Width" type="Integer" role="inputOnly" required="true" />
+            <property name="previewHeight" label="Preview Height" type="Integer" role="inputOnly" required="true" />
+            <property name="preserveTransparency" label="Preserve Transparency" default="false" type="Boolean" role="inputOnly" />
+            <property name="compressionQuality" label="Compression Quality (0–1)" type="Integer" role="inputOnly" required="true" />
+            <property name="backgroundColor" default="white" label="Background Color" type="String" role="inputOnly" />
+            <property name="previewMessage" label="Preview Message" type="String" role="inputOnly" />
+            <property name="preserveAspectRatio" label="Preserve Aspect Ratio on Preview" default="false" type="Boolean" role="inputOnly" />
+            <property name="fileSize" label="File Size" type="Integer" role="outputOnly" />
+            <property name="imageData" label="Image Data" type="String" role="outputOnly" />
+            <property name="imageData64" label="Image Data (Base64)" type="String" role="outputOnly" />
+            <property name="fileName" label="File Name" type="String" role="outputOnly" />
+            <property name="fileExtension" label="File Extension" type="String" role="outputOnly" />
+            <property name="error" label="Error" type="String" role="outputOnly" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

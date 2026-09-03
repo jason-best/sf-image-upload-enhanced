@@ -1,0 +1,20 @@
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.preview-message {
+    margin-bottom: 10px;
+}
+
+.preview-image {
+    object-fit: cover;
+}
+
+.preview-image-contain {
+    object-fit: contain;
+}

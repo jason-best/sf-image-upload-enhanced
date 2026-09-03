@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title={displayLabel}>
+        <div class="slds-p-around_medium">
+            <input type="file" accept="image/*" onchange={handleImageUpload} />
+            <template lwc:if={error}>
+                <p class="slds-text-color_error slds-m-top_x-small">{error}</p>
+            </template>
+        </div>
+        <template lwc:if={hasPreview}>
+            <div class={previewContainerClass}>
+                <template lwc:if={previewMessage}>
+                    <div class="preview-message" style={previewMessageStyle}>
+                        <lightning-formatted-rich-text value={previewMessage}></lightning-formatted-rich-text>
+                    </div>
+                </template>
+                <img src={imageData} alt="Processed image preview" class={previewImageClass} style={previewImageStyle} />
+            </div>
+        </template>
+    </lightning-card>
+</template>
